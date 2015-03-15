@@ -6,9 +6,9 @@ if has('vim_starting')
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Townk/vim-autoclose'
-
+NeoBundle 'scrooloose/nerdtree'               " ツリー表示
+NeoBundle 'Townk/vim-autoclose'               " カッコの自動閉じ
+NeoBundle 'nathanaelkane/vim-indent-guides'   " インデントを見やすく
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
@@ -19,6 +19,9 @@ NeoBundleCheck
 syntax on                         " シンタックスハイライト
 set encoding=utf8                 " エンコード
 set fileencoding=utf-8            " ファイルエンコード
+set tabstop=4                     " tab幅設定
+set shiftwidth=4                  " tab幅設定
+set expandtab                     " tab入力時に半角スペースに
 set scrolloff=3                   " スクロール時画面端じゃなくて余裕をもたせる
 set vb t_vb=                      " ビープ音を消す
 set clipboard+=unnamed            " OSのクリップボードを使う
@@ -45,4 +48,14 @@ let NERDTreeShowHidden = 1
 autocmd VimEnter * execute 'NERDTree'
 
 
-
+" =============================================
+" vim-indent-guids
+" =============================================
+" ガイドをスタートするインデントの量
+let g:indent_guides_start_level=1
+" ガイドの幅(以下はインデントに合わせている
+let g:indent_guides_guide_size=&tabstop
+" 色設定
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
