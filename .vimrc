@@ -48,6 +48,7 @@ set hlsearch                      " 検索結果をハイライト
 set directory=~/.vim/tmp          " swapファイルの出力先変更
 set backupdir=~/.vim/tmp          " backupファイルの出力先変更
 set hidden                        " 編集中でもファイルの切り替えを可能に
+set incsearch                     " インクリメンタルサーチを有効に
 
 " =============================================
 " NERDTree
