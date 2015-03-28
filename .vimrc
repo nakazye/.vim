@@ -19,6 +19,7 @@ NeoBundle 'scrooloose/nerdtree'               " ツリー表示
 NeoBundle 'Townk/vim-autoclose'               " カッコの自動閉じ
 NeoBundle 'nathanaelkane/vim-indent-guides'   " インデントを見やすく
 NeoBundle 'basyura/J6uil.vim'                 " lingrクライアント
+NeoBundle 'mattn/emmet-vim'                   " emmet
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
